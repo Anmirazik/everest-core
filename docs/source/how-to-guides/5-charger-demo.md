@@ -85,6 +85,46 @@ Open: **http://localhost:\<printed port\>/ui**
 
 ---
 
+## Setting Charging Profiles via SteVe
+
+Go to **http://localhost:8180/steve** → Operations → SetChargingProfile.
+
+### TxProfile (limit a specific connector during an active transaction)
+
+| Field | Value |
+|-------|-------|
+| ChargePointId | `cp001-everest` (or whichever charger) |
+| ConnectorId | `1` or `2` (must match an active transaction) |
+| ChargingProfilePurpose | `TxProfile` |
+| ChargingProfileKind | `Absolute` |
+| StackLevel | `1` |
+| startSchedule | any past UTC time e.g. `2026-01-01T00:00:00.000Z` |
+| ChargingRateUnit | `A` |
+| limit | e.g. `8.0` |
+
+> TxProfile requires an active transaction on the connector. It takes effect immediately.
+
+---
+
+### ChargePointMaxProfile (station-wide max limit)
+
+| Field | Value |
+|-------|-------|
+| ChargePointId | `cp001-everest` (or whichever charger) |
+| ConnectorId | `0` (must be 0 for station-wide) |
+| ChargingProfilePurpose | `ChargePointMaxProfile` |
+| ChargingProfileKind | `Absolute` |
+| StackLevel | `1` |
+| startSchedule | any past UTC time e.g. `2026-01-01T00:00:00.000Z` |
+| ChargingRateUnit | `A` |
+| limit | e.g. `8.0` |
+
+> **Important:** `startSchedule` must be a UTC time that has **already passed**. If set to a future time, the charger will accept the profile but not apply it until that time is reached. Always use a past UTC timestamp (e.g. `2026-01-01T00:00:00.000Z`) to apply the limit immediately.
+
+> `ConnectorId` must be `0` for ChargePointMaxProfile. Sending to connector 1 or 2 will result in a `Rejected` response.
+
+---
+
 ## Stopping the Demo
 
 ```bash
