@@ -1,6 +1,6 @@
 {
     "Internal": {
-        "ChargePointId": "cp001",
+        "ChargePointId": "cp002-everest",
         "CentralSystemURI": "127.0.0.1:8180/steve/websocket/CentralSystemService/",
         "ChargeBoxSerialNumber": "cp001",
         "ChargePointModel": "Yeti",
@@ -65,7 +65,7 @@
     },
     "Core": {
         "AllowOfflineTxForUnknownId": true,
-        "AuthorizationCacheEnabled": true,
+        "AuthorizationCacheEnabled": false,
         "AuthorizeRemoteTxRequests": true,
         "BlinkRepeat": 0,
         "ClockAlignedDataInterval": 900,
@@ -75,8 +75,8 @@
         "GetConfigurationMaxKeys": 1024,
         "HeartbeatInterval": 900,
         "LightIntensity": 0,
-        "LocalAuthorizeOffline": true,
-        "LocalPreAuthorize": true,
+        "LocalAuthorizeOffline": false,
+        "LocalPreAuthorize": false,
         "MaxEnergyOnInvalidId": 500,
         "MeterValuesAlignedData": "Energy.Active.Import.Register",
         "MeterValuesAlignedDataMaxLength": 1024,
@@ -127,12 +127,12 @@
         "DisableSecurityEventNotifications": false
     },
     "PnC": {
-        "ISO15118CertificateManagementEnabled": true,
-        "ISO15118PnCEnabled": true,
-        "CentralContractValidationAllowed": true,
+        "ISO15118CertificateManagementEnabled": false,
+        "ISO15118PnCEnabled": false,
+        "CentralContractValidationAllowed": false,
         "CertSigningWaitMinimum": 30,
         "CertSigningRepeatTimes": 2,
-        "ContractValidationOffline": true
+        "ContractValidationOffline": false
     },
     "CostAndPrice": {
         "CustomDisplayCostAndPrice": true,
