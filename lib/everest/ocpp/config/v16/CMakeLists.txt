@@ -43,6 +43,11 @@ list(APPEND CONFIGS
      config-docker.json
      config-full.json
      config-docker-tls.json
+     cp001-everest.json
+     cp002-everest.json
+     cp003-everest.json
+     cp004-everest.json
+     cp005-everest.json
      ../logging.ini
 )
 
