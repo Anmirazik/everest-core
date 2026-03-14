@@ -96,13 +96,13 @@ Go to **http://localhost:8180/steve** → Operations → SetChargingProfile.
 | ChargePointId | `cp001-everest` (or whichever charger) |
 | ConnectorId | `1` or `2` (must match an active transaction) |
 | ChargingProfilePurpose | `TxProfile` |
-| ChargingProfileKind | `Absolute` |
-| StackLevel | `1` |
+| ChargingProfileKind | `Relative` |
+| StackLevel | `0` |
 | startSchedule | any past UTC time e.g. `2026-01-01T00:00:00.000Z` |
 | ChargingRateUnit | `A` |
 | limit | e.g. `8.0` |
 
-> TxProfile requires an active transaction on the connector. It takes effect immediately.
+> TxProfile requires an active transaction on the connector. `startSchedule` must be a past UTC time for the profile to apply immediately.
 
 ---
 
