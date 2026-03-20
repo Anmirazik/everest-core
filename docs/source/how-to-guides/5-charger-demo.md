@@ -36,35 +36,53 @@ Open http://localhost:8180/steve (admin / 1234) and add the following Charge Poi
 
 ---
 
-## Step 1 — Start the 5 Chargers
+## Step 1 — Activate the Python Virtual Environment
 
-Open **5 separate terminals** and run one script per terminal:
+**Each terminal** used in this demo must have the venv active before running any scripts.
+
+```bash
+source ~/everest/build/venv/bin/activate
+```
+
+> The `iso15118_pip_install_dist` step only needs to be run once (during the initial build). If `iso15118_pip_install_dist_installed` exists in your `build/` directory, it has already been done and can be skipped.
+
+---
+
+## Step 2 — Start the 5 Chargers
+
+Open **5 separate terminals**, activate the venv in each, then run one script per terminal:
 
 ```bash
 # Terminal 1
-~/everest/everest-core/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp001.sh
+source ~/everest/build/venv/bin/activate
+~/everest/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp001.sh
 
 # Terminal 2
-~/everest/everest-core/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp002.sh
+source ~/everest/build/venv/bin/activate
+~/everest/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp002.sh
 
 # Terminal 3
-~/everest/everest-core/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp003.sh
+source ~/everest/build/venv/bin/activate
+~/everest/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp003.sh
 
 # Terminal 4
-~/everest/everest-core/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp004.sh
+source ~/everest/build/venv/bin/activate
+~/everest/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp004.sh
 
 # Terminal 5
-~/everest/everest-core/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp005.sh
+source ~/everest/build/venv/bin/activate
+~/everest/build/run-scripts/run-sil-ocpp-two-evse-load-balance-cp005.sh
 ```
 
 ---
 
-## Step 2 — Start Node-RED UI
+## Step 3 — Start Node-RED UI
 
-In a new terminal:
+In a new terminal, activate the venv then run:
 
 ```bash
-~/everest/everest-core/build/run-scripts/nodered-sil-two-evse-iso15118.sh
+source ~/everest/build/venv/bin/activate
+~/everest/build/run-scripts/nodered-sil-two-evse-iso15118.sh
 ```
 
 The script will print the port it picked, e.g.:

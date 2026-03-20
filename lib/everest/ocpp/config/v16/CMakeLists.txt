@@ -45,6 +45,7 @@ list(APPEND CONFIGS
      config-docker-tls.json
      cp001-everest.json
      cp002-everest.json
+     cp002-everest-pnc.json
      cp003-everest.json
      cp004-everest.json
      cp005-everest.json
