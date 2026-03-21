@@ -1,7 +1,7 @@
 {
     "Internal": {
         "ChargePointId": "cp002-everest",
-        "CentralSystemURI": "127.0.0.1:8180/steve/websocket/CentralSystemService/",
+        "CentralSystemURI": "127.0.0.1:8081/",
         "ChargeBoxSerialNumber": "cp001",
         "ChargePointModel": "Yeti",
         "ChargePointSerialNumber": "cp001",
@@ -127,8 +127,8 @@
         "DisableSecurityEventNotifications": false
     },
     "PnC": {
-        "ISO15118CertificateManagementEnabled": false,
-        "ISO15118PnCEnabled": false,
+        "ISO15118CertificateManagementEnabled": true,
+        "ISO15118PnCEnabled": true,
         "CentralContractValidationAllowed": false,
         "CertSigningWaitMinimum": 30,
         "CertSigningRepeatTimes": 2,
