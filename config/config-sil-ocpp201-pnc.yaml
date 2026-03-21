@@ -15,7 +15,7 @@ active_modules:
       device: auto
       supported_ISO15118_2: true
       tls_active: true
-      is_cert_install_needed: true
+      is_cert_install_needed: false
   evse_manager_1:
     module: EvseManager
     mapping:
