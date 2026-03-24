@@ -1,10 +1,10 @@
 {
     "Internal": {
         "ChargePointId": "cp003-everest",
-        "CentralSystemURI": "127.0.0.1:8180/steve/websocket/CentralSystemService/",
-        "ChargeBoxSerialNumber": "cp001",
+        "CentralSystemURI": "localhost:8010/OCPP16/5c866e81a2d9593de43efdb4/69c08b50af57e42d5562e9cf/cp003-everest",
+        "ChargeBoxSerialNumber": "cp003",
         "ChargePointModel": "Yeti",
-        "ChargePointSerialNumber": "cp001",
+        "ChargePointSerialNumber": "cp003",
         "ChargePointVendor": "Pionix",
         "FirmwareVersion": "0.1",
         "ICCID": "891004234814455936F",
@@ -124,7 +124,7 @@
         "CertificateStoreMaxLength": 1000,
         "CpoName": "Pionix",
         "SecurityProfile": 1,
-        "DisableSecurityEventNotifications": false
+        "DisableSecurityEventNotifications": true
     },
     "PnC": {
         "ISO15118CertificateManagementEnabled": false,

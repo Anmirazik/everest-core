@@ -169,7 +169,7 @@ active_modules:
         - module_id: slac_2
           implementation_id: ev
 
-  # --- Auth: OCPP validates tokens via SteVe (EIM only) ---
+  # --- Auth: OCPP validates tokens via Open e-Mobility (EIM only) ---
   # token_provider connections from evse_manager_1/2 enable Autocharge:
   # when EV sends EVCCID in SessionSetupReq, EvseManager converts it to
   # an Autocharge token and publishes it here — this is what ties the
@@ -184,14 +184,14 @@ active_modules:
         - module_id: token_provider_1
           implementation_id: main
         - module_id: ocpp
-          implementation_id: auth_provider    # RemoteStart tokens from SteVe
+          implementation_id: auth_provider    # RemoteStart tokens from Open e-Mobility
         - module_id: evse_manager_1           # Autocharge: EVCCID → token for connector 1
           implementation_id: token_provider
         - module_id: evse_manager_2           # Autocharge: EVCCID → token for connector 2
           implementation_id: token_provider
       token_validator:
         - module_id: ocpp
-          implementation_id: auth_validator   # SteVe validates all tokens
+          implementation_id: auth_validator   # Open e-Mobility validates all tokens
       evse_manager:
         - module_id: evse_manager_1
           implementation_id: evse
@@ -207,7 +207,7 @@ active_modules:
   token_provider_1:
     module: DummyTokenProviderManual
 
-  # --- OCPP module: connects to SteVe ---
+  # --- OCPP module: connects to Open e-Mobility ---
   ocpp:
     module: OCPP
     config_module:
